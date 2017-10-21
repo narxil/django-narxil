@@ -1,0 +1,37 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css.map' %}">
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"> -->
+    <title>narxil {% block title %}{% endblock %}</title>
+    <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+
+
+      <div class="container">
+        <section>
+          {% block heading %}{% endblock %}
+        </section>
+
+        <section>
+          {% block content %}{% endblock %}
+        </section>
+
+        <hr /> <!--linea di interruzione grigia-->
+
+        <footer>
+          <p>&copy; narxil 2017</p>
+        </footer>
+
+      </div><!--end container-->
+
+
+  </body>
+</html>

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Ultimi Posts{% endblock %}
+
+
+{% block heading %}
+  <h2>Last posts</h2>
+{% endblock %}
+
+{% block content %}
+  <ul class="list-unstyled">
+  {% for bookmark in bookmarks %}
+    <li class="well well-sm">{% include "narxil/bookmark.html" %}</li>
+  {% empty %}
+    <li>No bookmarks. :(</li>
+  {% endfor %}
+  </ul>
+{% endblock %}
