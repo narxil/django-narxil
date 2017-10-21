@@ -9,9 +9,9 @@
 {% endif %}
 {% if bookmark.tags.count %}
   {% for tag in bookmark.tags.all %}
-    <span class="label label-primary">{{ tag|lower }}</span>&nbsp;
+    <span class="label label-primary"> {{ tag|lower }}</span>&nbsp;
   {% endfor %}
 {% endif %}
-<br>by <a href="{% url "narxil_bookmark_user" bookmark.owner.username %}">
+<br>Scritto da: <a href="{% url "narxil_bookmark_user" bookmark.owner.username %}">
     {{ bookmark.owner.username }}</a>
-{{ bookmark.date_created|timesince }} ago
+{{ bookmark.date_created|timesince }} fa
