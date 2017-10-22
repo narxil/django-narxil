@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'narxil',
+    'crispy_forms',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -104,3 +105,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'djangoNarxil/static'),
 )
+
+
+LOGIN_URL = 'djangoNarxil_login'
+LOGOUT_URL = 'djangoNarxil_logout'
+LOGIN_REDIRECT_URL = 'narxil_bookmark_list'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'

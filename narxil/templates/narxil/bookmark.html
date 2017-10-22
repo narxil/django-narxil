@@ -15,3 +15,10 @@
 <br>Scritto da: <a href="{% url "narxil_bookmark_user" bookmark.owner.username %}">
     {{ bookmark.owner.username }}</a>
 {{ bookmark.date_created|timesince }} fa
+
+{% if bookmark.owner == user or user.is_superuser %}
+  <br><a class="btn btn-default btn-xs" role="button"
+      href="{% url "narxil_bookmark_edit" bookmark.pk %}">Edit bookmark</a>
+{% endif %}
+
+<hr class="decorativo">
